@@ -12,11 +12,11 @@
 
   <style>
     :root{
-      --bg:#fafafa;
+      --bg:#e6f3ea;        /* green background */
       --card:#ffffff;
       --text:#141414;
       --muted:#5a5a5a;
-      --border:#e6e6e6;
+      --border:#d8e5dd;
       --radius:16px;
     }
 
@@ -39,6 +39,12 @@
     header{
       text-align:center;
       margin-bottom:32px;
+    }
+
+    .logo{
+      width:110px;
+      margin:0 auto 14px;
+      display:block;
     }
 
     header .kicker{
@@ -75,6 +81,14 @@
 
     .muted{ color:var(--muted); }
 
+    .quote{
+      font-family:"Source Serif 4", Georgia, serif;
+      font-style:italic;
+      border-left:4px solid #7bbf98;
+      padding-left:16px;
+      margin-top:16px;
+    }
+
     /* GIF grid */
     .gif-grid{
       display:grid;
@@ -103,6 +117,7 @@
     @media (max-width:720px){
       .gif-grid{ grid-template-columns:1fr; }
       .gif-grid img{ height:240px; }
+      .logo{ width:90px; }
     }
   </style>
 </head>
@@ -112,9 +127,11 @@
 
   <!-- Page header -->
   <header>
+    <img src="logo.jpg" alt="Silly Goose Publishing Logo" class="logo">
+
     <p class="kicker">Digital Supplement</p>
-    <h1>[Book Title]</h1>
-    <p>Published by [Publisher Name]</p>
+    <h1>Cute & Silly For Nicole Narcisa</h1>
+    <p>Published by Silly Goose Publishing</p>
   </header>
 
   <!-- Welcome -->
@@ -131,13 +148,28 @@
   <section>
     <h2>About the Author</h2>
     <p>
-      <strong>[Author Name]</strong> is an independent illustrator whose work focuses on
-      hand-drawn studies, informal experimentation, and playful visual exploration.
-      Their projects often blend structure with spontaneity.
+      <strong>Rohan Jawale</strong> graduated in 2019 from Silly Goose University with a
+      PhD in Rohanology, a subcategory of Tomfoolery which was created by Tom Goose,
+      son of Silly Goose, who started Silly Goose University.
     </p>
+    <p>
+      He went on to start a very decorated career path, becoming a comedian, author,
+      and much more. He was voted <em>Silliest Man Alive</em> from 2023–2025 and
+      <em>Sexiest Polish Man</em> in 2024 despite being Indian.
+    </p>
+    <p>
+      He now spends his days bringing joy to the world by simply existing.
+    </p>
+
+    <!-- Quote -->
+    <div class="quote">
+      “You miss 100% of the shots you don’t take.” — Wayne Gretzky  
+      <br>— Michael Scott  
+      <br>— Rohan Jawale
+    </div>
   </section>
 
-  <!-- GIF section (no lore, just visuals) -->
+  <!-- GIF section -->
   <section>
     <h2>Additional Visuals</h2>
     <p class="muted">
@@ -146,17 +178,14 @@
 
     <div class="gif-grid">
       <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW56MXp3dDJxYW04Mm85bXV1a3J0eXJmYnY1OTliOHQ0d3hmaThwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3I8H8VvG9D7FRqd92Q/giphy.gif" alt="Supplemental visual 1">
-
       <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjI4c2Y1YTk1eno5N3RmajlncHY2Z2UycXJ1bW15ZW41Z3Q2ZWlmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8R13hY2pPvuSMGXzOv/giphy.gif" alt="Supplemental visual 2">
-
       <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzlpbmMwNm9oMzE3bmsxY3QyNDNpemlwZjZ0cThlODFmdms2aXp6OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jcpggDXzJICDVkWY9i/giphy.gif" alt="Supplemental visual 3">
-
       <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2wycjBqZ2gyemd5cG5sNDFzY200ajJ5Zmh6MmY0Z3JiMjJka2U0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/paf7IOKOacbzPinHQC/giphy.gif" alt="Supplemental visual 4">
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> [Publisher Name]. For personal use only.
+    © <span id="year"></span> Silly Goose Publishing. For personal use only.
   </footer>
 
 </main>
