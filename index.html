@@ -1,55 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bonus content</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Additional Digital Content</title>
+
+  <!-- Publisher-style fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      --bg:#fafafa;
+      --card:#ffffff;
+      --text:#141414;
+      --muted:#5a5a5a;
+      --border:#e6e6e6;
+      --radius:16px;
+    }
+
+    *{ box-sizing:border-box; }
+
     body{
       margin:0;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      font-family: Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter, system-ui, sans-serif;
+      line-height:1.55;
+    }
+
+    main{
+      max-width:900px;
+      margin:0 auto;
+      padding:48px 20px 64px;
+    }
+
+    header{
       text-align:center;
+      margin-bottom:32px;
+    }
+
+    header .kicker{
+      font-size:.8rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin:0 0 10px;
+    }
+
+    header h1{
+      font-family:"Source Serif 4", Georgia, serif;
+      font-size:clamp(2rem,4vw,3rem);
+      margin:0 0 8px;
+    }
+
+    header p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
       padding:24px;
+      margin-top:20px;
     }
-    h1{
-      font-size: 2.25rem;
-      margin-bottom: 24px;
+
+    section h2{
+      font-size:1.1rem;
+      margin:0 0 10px;
     }
+
+    .muted{ color:var(--muted); }
+
+    /* GIF grid */
     .gif-grid{
       display:grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:16px;
+      margin-top:12px;
     }
+
     .gif-grid img{
-      width:220px;
-      height:auto;
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid var(--border);
+      display:block;
+      background:#f2f2f2;
     }
-    p{
-      margin-top: 16px;
-      opacity: 0.7;
+
+    footer{
+      text-align:center;
+      margin-top:28px;
+      color:var(--muted);
+      font-size:.85rem;
+    }
+
+    @media (max-width:720px){
+      .gif-grid{ grid-template-columns:1fr; }
+      .gif-grid img{ height:240px; }
     }
   </style>
 </head>
+
 <body>
+<main>
 
-  <h1>Get pranked silly goose!!!! LOLOLOLOLOOL</h1>
+  <!-- Page header -->
+  <header>
+    <p class="kicker">Digital Supplement</p>
+    <h1>[Book Title]</h1>
+    <p>Published by [Publisher Name]</p>
+  </header>
 
-  <div class="gif-grid">
-    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW56MXp3dDJxYW04Mm85bXV1a3J0eXJmYnY1OTliOHQ0d3hmaThwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3I8H8VvG9D7FRqd92Q/giphy.gif" alt="prank gif 1">
+  <!-- Welcome -->
+  <section>
+    <h2>Welcome</h2>
+    <p class="muted">
+      This page contains additional digital material associated with the printed
+      edition of this book. Content may include visual references, supplementary
+      material, and informal extras.
+    </p>
+  </section>
 
-    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjI4c2Y1YTk1eno5N3RmajlncHY2Z2UycXJ1bW15ZW41Z3Q2ZWlmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8R13hY2pPvuSMGXzOv/giphy.gif" alt="prank gif 2">
+  <!-- About the author -->
+  <section>
+    <h2>About the Author</h2>
+    <p>
+      <strong>[Author Name]</strong> is an independent illustrator whose work focuses on
+      hand-drawn studies, informal experimentation, and playful visual exploration.
+      Their projects often blend structure with spontaneity.
+    </p>
+  </section>
 
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzlpbmMwNm9oMzE3bmsxY3QyNDNpemlwZjZ0cThlODFmdms2aXp6OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jcpggDXzJICDVkWY9i/giphy.gif" alt="prank gif 3">
+  <!-- GIF section (no lore, just visuals) -->
+  <section>
+    <h2>Additional Visuals</h2>
+    <p class="muted">
+      A small collection of informal visual material included as part of the digital supplement.
+    </p>
 
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2wycjBqZ2gyemd5cG5sNDFzY200ajJ5Zmh6MmY0Z3JiMjJka2U0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/paf7IOKOacbzPinHQC/giphy.gif" alt="prank gif 4">
-  </div>
+    <div class="gif-grid">
+      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW56MXp3dDJxYW04Mm85bXV1a3J0eXJmYnY1OTliOHQ0d3hmaThwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3I8H8VvG9D7FRqd92Q/giphy.gif" alt="Supplemental visual 1">
 
-  <p>:)</p>
+      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjI4c2Y1YTk1eno5N3RmajlncHY2Z2UycXJ1bW15ZW41Z3Q2ZWlmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8R13hY2pPvuSMGXzOv/giphy.gif" alt="Supplemental visual 2">
 
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzlpbmMwNm9oMzE3bmsxY3QyNDNpemlwZjZ0cThlODFmdms2aXp6OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jcpggDXzJICDVkWY9i/giphy.gif" alt="Supplemental visual 3">
+
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2wycjBqZ2gyemd5cG5sNDFzY200ajJ5Zmh6MmY0Z3JiMjJka2U0bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/paf7IOKOacbzPinHQC/giphy.gif" alt="Supplemental visual 4">
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> [Publisher Name]. For personal use only.
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
